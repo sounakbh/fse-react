@@ -45,7 +45,7 @@ test('tuit list renders mocked', async () => {
             <TuitsList tuits={tuits}/>
         </HashRouter>);
 
-    const user = screen.getByText(/@SpaceX Dragon spacecraft/i);
-    expect(user).toBeInTheDocument();
+    const tuitText = screen.getByText(/@SpaceX Dragon spacecraft/i);
+    expect(tuitText).toBeInTheDocument();
     mock.mockRestore();
 });
